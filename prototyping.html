@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototyping</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">Lama Lama Leak Detection</div>
+    <nav>
+      <ul>
+        <li><a  href="home.html">Home</a></li>
+        <li><a  href="designCriteria.html">Design Criteria and Selection</a></li>
+        <li><a class="active" href="prototyping.html">Prototyping</a></li>
+        <li><a  href="implementation.html">Implementation</a></li>
+        <li><a  href="costAnalytics.html">Cost Analytics</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">More ▾</button>
+          <div class="dropdown-content">
+            <a  href="otherConsideration.html">Other Consideration</a>
+            <a  href="references.html">References</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <section class="page">
+    <h1>4. Prototyping</h1>
+
+    <h3>4.1 Prototype Aim and Selection</h3>
+    <p>The prototype will focus on how the system detects abnormal water loss, displays alerts, and guides Rangers to inspect the correct location.</p>
+    <p>Lama Lama Country has water reliability challenges, especially along the 80 mm HDPE pipeline from the Stewart River intake to the water towers, where multiple small leaks have already been identified. The system also needs to be practical in a remote and seasonal environment, where wet-season flooding can limit access and dry-season water demand becomes more serious.</p>
+
+    <table>
+      <tr>
+        <th>What Was Prototyped</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td>Sensor layout</td>
+        <td>To show where tank sensors, pressure sensors, and visual checks would be placed.</td>
+      </tr>
+      <tr>
+        <td>Monitoring dashboard</td>
+        <td>To test whether leak alerts and sensor data could be shown clearly.</td>
+      </tr>
+      <tr>
+        <td>Ranger response process</td>
+        <td>To test whether Rangers could understand where to inspect and what action to take.</td>
+      </tr>
+    </table>
+
+    <h3>4.2 Prototype Construction</h3>
+    <p>The prototype was constructed as a low-fidelity digital prototype. It includes a three-tier system diagram, a monitoring dashboard mockup, and a short animation/GIF concept showing how a leak alert moves through the system.</p>
+    <p>The prototype was designed around the proposed three-tier monitoring approach:</p>
+
+    <div class="tier-grid">
+      <div class="tier">
+        <strong>Tier 1</strong>
+        <p><b>Area:</b> Critical infrastructure</p>
+        <p><b>Prototype Element:</b> FarmBot tank sensor and pressure sensors on the main pipeline and pump line.</p>
+      </div>
+      <div class="tier">
+        <strong>Tier 2</strong>
+        <p><b>Area:</b> Community-use areas</p>
+        <p><b>Prototype Element:</b> Visual indicators and weekly Ranger inspections.</p>
+      </div>
+      <div class="tier">
+        <strong>Tier 3</strong>
+        <p><b>Area:</b> Remote/disconnected sites</p>
+        <p><b>Prototype Element:</b> Remote tank monitoring and LoRaWAN-compatible pressure sensors.</p>
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Tier</th>
+        <th>Area</th>
+        <th>Prototype Element</th>
+      </tr>
+      <tr>
+        <td>Tier 1</td>
+        <td>Critical infrastructure</td>
+        <td>FarmBot tank sensor and pressure sensors on the main pipeline and pump line</td>
+      </tr>
+      <tr>
+        <td>Tier 2</td>
+        <td>Community-use areas</td>
+        <td>Visual indicators and weekly Ranger inspections</td>
+      </tr>
+      <tr>
+        <td>Tier 3</td>
+        <td>Remote/disconnected sites</td>
+        <td>Remote tank monitoring and LoRaWAN-compatible pressure sensors</td>
+      </tr>
+    </table>
+
+    <p>This structure was used because not every site needs the same level of technology. Critical infrastructure needs continuous monitoring, while community-use areas can use simpler checks, and remote areas need monitoring that can work with limited access.</p>
+
+    <h3>4.3 Prototype Description</h3>
+    <p>The prototype shows how water leak detection would work across Lama Lama Country. It connects tank monitoring, pressure monitoring, visual inspection, remote communication, and Ranger response into one simple workflow.</p>
+
+    <div class="status-row">
+      <div class="status-box">
+        <p>Tank Level</p>
+        <div class="number">72%</div>
+        <p>Normal range</p>
+      </div>
+      <div class="status-box">
+        <p>Main Pipeline Pressure</p>
+        <div class="number">-12%</div>
+        <p>Below baseline</p>
+      </div>
+      <div class="status-box">
+        <p>Action Required</p>
+        <div class="number">Inspect</div>
+        <p>Main HDPE Pipeline — Zone A</p>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <strong>Example dashboard alert:</strong> Leak suspected. Check Main HDPE Pipeline — Zone A. Ranger action: inspect, confirm, record.
+    </div>
+
+    <p>The prototype can:</p>
+    <ul class="prototype-list">
+      <li>show where sensors and manual checks are placed;</li>
+      <li>display tank level and pressure readings;</li>
+      <li>identify abnormal pressure drops or rapid tank-level changes;</li>
+      <li>trigger a leak warning;</li>
+      <li>show Rangers the location and recommended action;</li>
+      <li>support targeted inspection instead of checking the whole pipeline manually.</li>
+    </ul>
+
+    <p>The dashboard mockup was designed to be simple and action-focused. It does not only show data, but also tells Rangers what the problem is, where it is happening, and what they should do next.</p>
+
+    <h3>4.4 Prototype Testing</h3>
+    <p>The prototype was tested using scenario-based testing instead of physical field deployment. This method was suitable because the prototype was created to test the system logic, alert clarity, and Ranger response process.</p>
+    <p>The tests simulated realistic situations that could happen in Lama Lama Country, including normal water use, a pressure drop in the main pipeline, a rapid tank-level decrease, and a remote-site issue.</p>
+
+    <table>
+      <tr>
+        <th>Test Scenario</th>
+        <th>What Was Tested</th>
+        <th>Input / Condition</th>
+        <th>Expected Result</th>
+      </tr>
+      <tr>
+        <td>Normal water use</td>
+        <td>Whether the dashboard can show normal system conditions</td>
+        <td>Tank level and pipeline pressure stay within the normal range</td>
+        <td>Dashboard shows Normal status and no alert</td>
+      </tr>
+      <tr>
+        <td>Main pipeline pressure drop</td>
+        <td>Whether the pressure sensor can identify a possible leak</td>
+        <td>Pressure on the 80 mm HDPE pipeline drops by around 10–15% below baseline</td>
+        <td>Dashboard shows Leak Suspected and recommends Ranger inspection</td>
+      </tr>
+      <tr>
+        <td>Rapid tank-level drop</td>
+        <td>Whether the tank-level sensor can detect unusual water loss</td>
+        <td>Aqualine Tank level drops faster than expected</td>
+        <td>Dashboard shows a warning for possible leak or outlet issue</td>
+      </tr>
+      <tr>
+        <td>Remote site monitoring</td>
+        <td>Whether remote locations can still be monitored</td>
+        <td>Running Creek, Upper Camp, or Lower Camp sends low tank or pressure data</td>
+        <td>Dashboard shows a remote-site warning and identifies which site needs checking</td>
+      </tr>
+      <tr>
+        <td>Ranger response clarity</td>
+        <td>Whether the alert gives clear action steps</td>
+        <td>Dashboard displays a leak warning</td>
+        <td>Rangers can understand where to inspect and what to check</td>
+      </tr>
+    </table>
+
+    <h3>4.5 Testing Results and Modifications</h3>
+    <p>Testing showed that the prototype successfully demonstrated the main logic of the hybrid leak detection system. The system could show normal conditions, detect abnormal water changes, and display warnings for possible leaks.</p>
+    <p>However, testing also showed that some parts of the prototype needed to be clearer for real users. The early version of the dashboard gave warnings, but some alerts were too broad or too technical. Because of this, the dashboard was modified to include clearer location labels, simpler warning language, and direct Ranger action steps.</p>
+
+    <table>
+      <tr>
+        <th>Issue Found During Testing</th>
+        <th>Modification Made</th>
+      </tr>
+      <tr>
+        <td>Alert location was too broad</td>
+        <td>Added specific location labels, such as “Main HDPE Pipeline — Zone A.”</td>
+      </tr>
+      <tr>
+        <td>Warning language was too technical</td>
+        <td>Changed the wording to simpler action-based language.</td>
+      </tr>
+      <tr>
+        <td>Ranger response process had too many steps</td>
+        <td>Reduced the process to three steps: inspect, confirm, record.</td>
+      </tr>
+      <tr>
+        <td>Remote sites were unclear in the dashboard</td>
+        <td>Separated remote sites clearly under Tier 3.</td>
+      </tr>
+      <tr>
+        <td>Dashboard only showed data, not action</td>
+        <td>Added an “Action Required” column for Rangers.</td>
+      </tr>
+    </table>
+
+  </section>
+</main>
+
+<footer>
+  Water leak detection prototype website
+</footer>
+</body>
+</html>
