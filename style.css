@@ -1,13 +1,22 @@
+/* ===========================================================================
+   Lama Lama Leak Detection — External CSS
+   Design language adapted from IWBS001 A2 style.
+   =========================================================================== */
+
+/* =========================
+   0) Reset & Variables
+   ========================= */
 :root {
-  --dark: #1f2933;
-  --green: #2f6b4f;
-  --light-green: #e9f5ee;
-  --cream: #f8f5ed;
-  --white: #ffffff;
-  --border: #d7ddd8;
-  --text: #263238;
-  --muted: #61706a;
-  --warning: #f6b73c;
+  --outer-card-bg: #284139;
+  --outer-card-fg: #F8D794;
+  --muted:         #886830;
+  --bg:            #809076;
+  --ink:           #111A19;
+  --aux:           #454545;
+  --warning:       #f6b73c;
+  --radius:        12px;
+  --shadow:        5px 5px 11px #0000001a;
+  --border:        rgba(248, 215, 148, 0.18);
 }
 
 * {
@@ -16,20 +25,70 @@
   padding: 0;
 }
 
+/* =========================
+   1) Base & Typography
+   ========================= */
+html, body { margin: 0; padding: 0; }
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--text);
+  font-family: system-ui, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--outer-card-fg);
   line-height: 1.6;
 }
 
+p { margin-bottom: 14px; }
+
+h1 {
+  font-family: "Cinzel", "Copperplate", "Copperplate Gothic Light", Garamond, serif;
+  font-size: clamp(2.4rem, 3vw + 1rem, 4.5rem);
+  color: var(--outer-card-fg);
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  margin: 0 0 14px;
+  text-shadow: 0 0 6px var(--muted), 0 0 12px var(--muted);
+  animation: fadeSlideUp 1s ease both;
+}
+
+h2 {
+  font-family: "Cinzel", "Copperplate", "Copperplate Gothic Light", Garamond, serif;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  color: var(--outer-card-fg);
+  font-variant: small-caps;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  text-shadow: 0 0 4px var(--muted);
+}
+
+h3 {
+  font-family: "Cinzel", "Copperplate", "Copperplate Gothic Light", Garamond, serif;
+  font-size: 1.1rem;
+  color: var(--outer-card-fg);
+  letter-spacing: 0.3px;
+  margin: 22px 0 8px;
+}
+
+h1, h2, h3 { letter-spacing: .3px; }
+
+ul, ol { padding-left: 1.25rem; }
+
+a:hover { text-decoration: underline; }
+
+strong { color: var(--outer-card-fg); }
+
+/* =========================
+   2) Header & Nav
+   ========================= */
 header {
-  background: var(--dark);
-  color: var(--white);
+  background: var(--ink);
+  color: var(--outer-card-fg);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+  padding: 0 16px;
 }
 
 .navbar {
@@ -38,122 +97,203 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 24px;
+  padding: 12px 8px;
   gap: 20px;
 }
 
 .logo {
-  font-size: 18px;
+  font-family: "Dancing Script", "Lucida Handwriting", cursive;
+  font-size: 19px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  color: var(--outer-card-fg);
   white-space: nowrap;
+  text-shadow: 0 0 6px var(--muted), 0 0 12px var(--muted);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 
 nav a,
 .dropbtn {
-  color: var(--white);
+  font-family: "Dancing Script", "Lucida Handwriting", cursive;
+  color: var(--outer-card-fg);
   text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 9px 13px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 700;
   background: transparent;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  display: inline-block;
+  line-height: 1;
+  transition: color .3s ease, background .2s ease, box-shadow .15s ease, transform .15s ease;
 }
 
 nav a:hover,
-nav a.active,
 .dropdown:hover .dropbtn {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--outer-card-bg);
+  color: var(--bg);
+  box-shadow: 0 4px 0 var(--aux), 0 6px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
-.dropdown {
-  position: relative;
+nav a.active {
+  background: var(--outer-card-bg);
+  color: var(--outer-card-fg);
+  border: 1px solid var(--outer-card-bg);
+  box-shadow: 0 6px 0 var(--ink), 0 10px 14px var(--aux);
 }
+
+nav a.active:hover {
+  color: var(--bg);
+}
+
+/* Dropdown */
+.dropdown { position: relative; }
 
 .dropdown-content {
   display: none;
   position: absolute;
   right: 0;
-  top: 42px;
-  background: var(--white);
+  top: 46px;
+  background: var(--outer-card-bg);
   min-width: 200px;
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   overflow: hidden;
+  border: 1px solid var(--border);
+  z-index: 200;
 }
 
 .dropdown-content a {
-  color: var(--text);
+  font-family: "Dancing Script", "Lucida Handwriting", cursive;
+  color: var(--outer-card-fg);
   display: block;
-  padding: 12px 14px;
+  padding: 12px 16px;
   border-radius: 0;
+  font-size: 13px;
 }
 
 .dropdown-content a:hover,
 .dropdown-content a.active {
-  background: var(--light-green);
+  background: rgba(248, 215, 148, 0.12);
+  text-decoration: none;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+.dropdown:hover .dropdown-content { display: block; }
 
+/* =========================
+   3) Layout
+   ========================= */
 main {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 38px 24px 70px;
+  padding: 38px 24px 80px;
 }
 
+/* =========================
+   4) Page & Cards
+   ========================= */
 .page {
-  background: var(--white);
+  background: var(--outer-card-bg);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 30px;
   min-height: 420px;
-  box-shadow: 0 8px 20px rgba(42, 54, 46, 0.06);
+  box-shadow: var(--shadow);
+  animation: fadeUp 1s ease both;
 }
 
 .blank-page {
-  background: var(--white);
+  background: var(--outer-card-bg);
 }
 
-h1 {
-  color: var(--green);
-  font-size: 34px;
+/* Hero section on Home */
+.hero-section {
+  text-align: center;
+  padding: 32px 20px 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-section p {
+  font-family: "Century Gothic", "Gill Sans", sans-serif;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--outer-card-fg);
+  opacity: 0.9;
+}
+
+/* Content cards within pages */
+.content-card {
+  background: rgba(248, 215, 148, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  animation: fadeUp 1.2s ease both;
+}
+
+.content-card h2 {
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Reference list (APA hanging indent) */
+.ref-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ref-list li {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 16px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.ref-list a {
+  color: var(--outer-card-fg);
+  word-break: break-all;
+  opacity: 0.8;
+}
+
+.ref-list a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Needs/problem statement highlight */
+.needs-statement {
+  font-family: "Copperplate", Garamond, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  background: rgba(248, 215, 148, 0.08);
+  border-left: 4px solid var(--muted);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius) var(--radius) 0;
   margin-bottom: 14px;
+  text-shadow: 0 0 4px var(--muted);
 }
 
-h2 {
-  color: var(--green);
-  font-size: 30px;
-  margin-bottom: 14px;
-}
-
-h3 {
-  font-size: 22px;
-  margin: 26px 0 10px;
-  color: var(--dark);
-}
-
-p {
-  margin-bottom: 14px;
-}
-
+/* =========================
+   5) Tables
+   ========================= */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 16px 0 24px;
-  background: white;
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
 }
@@ -163,44 +303,59 @@ th, td {
   padding: 12px 14px;
   text-align: left;
   vertical-align: top;
-  font-size: 15px;
+  font-size: 14px;
+  color: var(--outer-card-fg);
 }
 
 th {
-  background: var(--light-green);
-  color: var(--dark);
+  background: rgba(248, 215, 148, 0.12);
+  font-family: "Copperplate", Garamond, serif;
+  font-variant: small-caps;
   font-weight: 700;
+  letter-spacing: 0.6px;
 }
 
+/* =========================
+   6) Components
+   ========================= */
+
+/* Prototype list */
 .prototype-list {
   margin: 12px 0 18px 22px;
 }
 
 .prototype-list li {
   margin-bottom: 8px;
+  list-style: square;
 }
 
+/* Tier grid */
 .tier-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
   margin: 20px 0;
 }
 
 .tier {
-  border-radius: 16px;
+  border-radius: var(--radius);
   padding: 18px;
   border: 1px solid var(--border);
-  background: #f9fbfa;
+  background: rgba(248, 215, 148, 0.06);
+  animation: fadeUp 1.45s ease both;
+  box-shadow: var(--shadow);
 }
 
 .tier strong {
   display: inline-block;
   margin-bottom: 8px;
-  color: var(--green);
-  font-size: 18px;
+  color: var(--outer-card-fg);
+  font-size: 1.1rem;
+  font-family: "Copperplate", Garamond, serif;
+  text-shadow: 0 0 6px var(--muted);
 }
 
+/* Status row */
 .status-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -210,55 +365,91 @@ th {
 
 .status-box {
   padding: 16px;
-  border-radius: 14px;
-  background: #f7faf8;
+  border-radius: var(--radius);
+  background: rgba(248, 215, 148, 0.07);
   border: 1px solid var(--border);
+  text-align: center;
+  box-shadow: var(--shadow);
 }
+
+.status-box p { margin-bottom: 4px; font-size: 0.9rem; opacity: 0.85; }
 
 .status-box .number {
-  font-size: 26px;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--green);
+  color: var(--outer-card-fg);
+  font-family: "Copperplate", Garamond, serif;
+  text-shadow: 0 0 6px var(--muted), 0 0 12px var(--muted);
+  margin: 4px 0;
 }
 
+/* Alert box */
 .alert-box {
-  background: #fff8e8;
-  border: 1px solid #f0d28a;
-  border-left: 6px solid var(--warning);
-  padding: 16px;
-  border-radius: 12px;
-  margin: 18px 0;
+  background: rgba(246, 183, 60, 0.1);
+  border: 1px solid rgba(246, 183, 60, 0.35);
+  border-left: 5px solid var(--warning);
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  margin: 16px 0;
+  color: var(--outer-card-fg);
 }
 
+/* =========================
+   7) Footer
+   ========================= */
 footer {
   text-align: center;
-  padding: 28px 20px;
-  color: var(--muted);
+  padding: 20px;
+  color: var(--outer-card-fg);
   font-size: 14px;
+  font-family: "Dancing Script", "Lucida Handwriting", Arial, sans-serif;
+  background: var(--ink);
+  border-top: 1px solid rgba(248, 215, 148, 0.1);
 }
 
-@media (max-width: 850px) {
+/* =========================
+   8) Animations
+   ========================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* =========================
+   9) Responsive
+   ========================= */
+@media (max-width: 900px) {
   .navbar {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-  }
+  nav ul { flex-wrap: wrap; }
 
   .dropdown-content {
     left: 0;
     right: auto;
   }
+}
 
-  .page {
-    padding: 22px;
-  }
+@media (max-width: 600px) {
+  .page { padding: 18px; }
+
+  .hero-section h1 { font-size: 2.6rem; }
 
   table {
     display: block;
     overflow-x: auto;
     white-space: normal;
+  }
+
+  .tier-grid,
+  .status-row {
+    grid-template-columns: 1fr;
   }
 }

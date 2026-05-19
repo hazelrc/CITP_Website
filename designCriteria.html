@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design Criteria and Selection</title>
+  <title>Design Criteria and Selection — Lama Lama Leak Detection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,18 +15,13 @@
     <div class="logo">Lama Lama Leak Detection</div>
     <nav>
       <ul>
-        <li><a  href="index.html">Home</a></li>
-        <li><a class="active" href="designCriteria.html">Design Criteria and Selection</a></li>
-        <li><a  href="prototyping.html">Prototyping</a></li>
-        <li><a  href="implementation.html">Implementation</a></li>
-        <li><a  href="costAnalytics.html">Cost Analytics</a></li>
-        <li class="dropdown">
-          <button class="dropbtn">More ▾</button>
-          <div class="dropdown-content">
-            <a  href="otherConsideration.html">Other Consideration</a>
-            <a  href="references.html">References</a>
-          </div>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active"href="designCriteria.html">Design Criteria and Selection</a></li>
+        <li><a href="prototyping.html">Prototyping</a></li>
+        <li><a href="implementation.html">Implementation</a></li>
+        <li><a href="costAnalytics.html">Cost Analytics</a></li>
+        <li><a href="otherConsideration.html">Other Consideration</a></li>
+        <li><a href="references.html">References</a></li>
       </ul>
     </nav>
   </div>
@@ -31,7 +29,52 @@
 
 
 <main>
-  <section class="page blank-page">
+  <section class="page">
+
+    <h1>Design Criteria and Selection</h1>
+
+    <section class="content-card">
+      <h2>Design Criteria</h2>
+      <p>The following design criteria are used for system evaluation and screening of alternative solutions. The weights are all set to 5 to ensure the objectives and fair of the evaluation process.</p>
+
+      <h3>1. Culturally Appropriate</h3>
+      <p>The solution must be linked with the cultural values, governance structure and local customs of Lama Lama Country, including coordination with the decision-making mechanism of the YAC, and respect the leading position of the elder group in community affairs (Lama Lama Aboriginal Corporation, n.d.).</p>
+
+      <h3>2. Low Cost</h3>
+      <p>The initial installation cost and the long-term operation and maintenance costs of the solution must be within the community's affordability range. Priority should be given to reusing existing infrastructure such as FarmBot sensors and Starlink connections to reduce repetitive investment (EWB Australia, n.d.). The transportation and logistics costs in remote areas are high, and the selection of components should fully consider the convenience of procurement.</p>
+
+      <h3>3. Maintenance</h3>
+      <p>The solution must be capable of being maintained and simply repaired on a daily basis by Rangers and local residents without the assistance of external experts. The tools and spare parts required should be of common specifications. This standard directly responds to the core requirement of the EWB design brief of "maintenance priority and minimum complexity" (EWB Australia, n.d.).</p>
+
+      <h3>4. Relevance</h3>
+      <p>The solution must directly address the core issue of pipeline leakage. It can effectively reduce water resource loss and improve the reliability of the water supply during the dry season.</p>
+
+      <h3>5. Automatic</h3>
+      <p>The solution needs to be capable of proactively identifying leaks or abnormal conditions without human checking and minimising the routine inspection burden on Rangers as much as possible (Romero-Ben et al., 2023; Team, 2026).</p>
+
+      <h3>6. Environment</h3>
+      <p>The solution must be able to withstand the extreme seasonal climate of Port Stewart, including conditions such as flooding during the rainy season, road closures, and high temperatures and dryness during the dry season (EWB Australia, n.d.).</p>
+
+      <h3>7. Durability</h3>
+      <p>The equipment and components must be capable of long-term stable operation in remote environments, reducing the additional costs and logistics pressure caused by component replacement.</p>
+
+      <h3>8. Feasibility</h3>
+      <p>The solution must be practically feasible within the constraints of existing resources, technical conditions and community capabilities.</p>
+    </section>
+
+    <section class="content-card">
+      <h2>Design Solution Options</h2>
+      <p>Here, three independent design proposals for addressing water leakage issues in Lama Lama Country will be presented. Each proposal takes a different technical approach and all have taken into account the remote and seasonal special environment of Lama Lama Country.</p>
+
+      <h3>1. Hybrid Leak Detection System</h3>
+      <p>This solution combines automatic sensing technology with manual community inspections. Key infrastructure is continuously monitored using EMP500-PP pressure sensors and data is sent back via Starlink. It is an expansion based on the existing FarmBot system, achieving a balance between technical efficiency and local maintainability.</p>
+
+      <h3>2. Modular Water Tank and Repair System</h3>
+      <p>This plan improves the system's redundancy by deploying standardised modular water tank components and prefabricated pipeline repair kits, ensuring communities can quickly switch to backup water storage units and complete repairs independently when pipeline leaks occur. The components are of universal specifications and do not require specialised tools, facilitating local installation and replacement. However, this plan focuses on emergency repairs after leaks occur and lacks proactive early warning capabilities, limiting its contribution to water resource protection during dry seasons.</p>
+
+      <h3>3. Manual Inspection and Monitoring</h3>
+      <p>This scheme involves systematic visual inspections and pressure gauge readings of the main pipelines, water towers and various water usage points by Rangers on a regular basis as per a standardised checklist. It does not require any electronic devices, has an extremely low initial cost and is highly culturally appropriate. However, it cannot maintain the inspection frequency at night and during the rainy season, and the response time for leakage detection is relatively long. It has the lowest level of automation.</p>
+    </section>
 
   </section>
 </main>
