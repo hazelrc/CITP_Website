@@ -1,41 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Implementation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<header>
-  <div class="navbar">
-    <div class="logo">Lama Lama Leak Detection</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="designCriteria.html">Design Criteria and Selection</a></li>
-        <li><a href="prototyping.html">Prototyping</a></li>
-        <li><a class="active"href="implementation.html">Implementation</a></li>
-        <li><a href="costAnalytics.html">Cost Analytics</a></li>
-        <li><a href="otherConsideration.html">Other Consideration</a></li>
-        <li><a href="references.html">References</a></li>
+  <header>
+    <div class="navbar">
+      <div class="logo">Lama Lama Leak Detection</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="designCriteria.html">Design Criteria and Selection</a></li>
+          <li><a href="prototyping.html">Prototyping</a></li>
+          <li><a class="active" href="implementation.html">Implementation</a></li>
+          <li><a href="costAnalytics.html">Cost Analytics</a></li>
+          <li><a href="otherConsideration.html">Other Consideration</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="page">
+      <h1>Implementation Plan</h1>
+
+      <p>
+        This section provides the reader with an understanding of how to implement this project.
+        It should be clear how the community are involved in implementation.
+      </p>
+
+      <ul class="prototype-list">
+        <li>How will the solution be constructed and how will the community be trained in its construction and use?</li>
+        <li>How will the solution be introduced to the client or community and used, constructed, managed, and
+          maintained over time?</li>
+        <li>How will the design be evaluated?</li>
+        <li>How will the project affect the future workings of the client or community?</li>
+        <li>How can the client or community take ownership of the project?</li>
+        <li>How will the solution be repaired if something goes wrong?</li>
       </ul>
-    </nav>
-  </div>
-</header>
 
+      <figure class="prototype-figure figure-small">
+        <img src="Images/Implement1.png"
+          alt="Implementation setup showing sensors, water infrastructure, and community training">
+        <figcaption>
+          <strong>Figure 1.</strong> Initial system implementation showing sensor installation, dashboard setup, and
+          community training.
+        </figcaption>
+      </figure>
 
-<main>
-  <section class="page blank-page">
+      <h3>System Implementation</h3>
+      <p>
+        The hybrid leak detection system will be implemented by building on the existing water infrastructure
+        already used in Lama Lama Country, such as FarmBot monitoring systems and satellite connectivity
+        (Centre for Appropriate Technology, n.d.). Additional sensors, including pressure, flow, and tank level
+        monitors, will be installed at key locations such as the main pipeline, water tanks, and remote sites.
+      </p>
 
-  </section>
-</main>
+      <p>
+        The system will be introduced in stages, prioritising critical infrastructure first. This staged approach
+        improves reliability and allows gradual expansion over time, which is recommended for remote water
+        systems (Romero-Ben et al., 2023).
+      </p>
 
-<footer>
-  Water leak detection prototype website
-</footer>
+      <h3>Community Training and Involvement</h3>
+      <p>
+        Community involvement is essential for long-term success. Local Rangers and community members will be
+        trained to interpret alerts, inspect infrastructure, and carry out basic repairs. This aligns with best
+        practices for remote infrastructure projects, where local capacity building improves sustainability and
+        system performance (Centre for Appropriate Technology, n.d.).
+      </p>
+
+      <figure class="prototype-figure figure-small">
+        <img src="Images/Implement2.png"
+          alt="Rangers and community members being trained to use the water monitoring system">
+        <figcaption>
+          <strong>Figure 2.</strong> Rangers and community members are trained to read alerts, inspect infrastructure,
+          and perform basic maintenance.
+        </figcaption>
+      </figure>
+
+      <h3>Operation and Maintenance</h3>
+      <p>
+        The system will operate through continuous monitoring of pressure, flow, and water levels to detect leaks
+        early. When abnormal conditions are detected, alerts will guide Rangers to the affected location. Early
+        detection systems have been shown to significantly reduce water loss and improve response times in water
+        distribution networks (Romero-Ben et al., 2023).
+      </p>
+
+      <p>
+        Routine maintenance will include inspections, sensor checks, and minor repairs. More complex issues will
+        be escalated to external technicians when required.
+      </p>
+
+      <figure class="prototype-figure figure-tiny">
+        <img src="Images/Implement3.png" alt="Rangers inspecting pipeline sensors and carrying out maintenance">
+        <figcaption>
+          <strong>Figure 3.</strong> Routine operation and maintenance, including sensor checks, pipeline inspection,
+          and minor repairs.
+        </figcaption>
+      </figure>
+
+      <h3>System Evaluation</h3>
+      <p>
+        The system will be evaluated based on:
+      </p>
+
+      <ul class="prototype-list">
+        <li>Reduction in water loss</li>
+        <li>Response time to leaks</li>
+        <li>Reliability during seasonal conditions</li>
+      </ul>
+
+      <p>
+        These performance indicators are commonly used in water management systems to assess efficiency and
+        sustainability (Romero-Ben et al., 2023).
+      </p>
+
+      <figure class="prototype-figure figure-small">
+        <img src="Images/Implement4.png"
+          alt="System evaluation dashboard showing water loss, response time, and reliability indicators">
+        <figcaption>
+          <strong>Figure 4.</strong> System evaluation based on water loss reduction, leak response time, and seasonal
+          reliability.
+        </figcaption>
+      </figure>
+
+      <h3>Long-Term Sustainability and Ownership</h3>
+      <p>
+        The system is designed to support community ownership by using simple and modular components that can
+        be maintained locally. This approach reduces dependence on external support and ensures long-term
+        functionality in remote areas (Centre for Appropriate Technology, n.d.).
+      </p>
+
+      <p>
+        Improving water efficiency is especially important in remote Australian communities, where water scarcity
+        directly impacts daily life and wellbeing (Beal, 2018).
+      </p>
+
+      <figure class="prototype-figure figure-small">
+        <img src="Images/Implement5.png"
+          alt="Community ownership and long-term sustainability of the leak detection system">
+        <figcaption>
+          <strong>Figure 5.</strong> Long-term ownership supported by Ranger training, local maintenance, and community
+          involvement.
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    Water leak detection prototype website
+  </footer>
 </body>
+
 </html>

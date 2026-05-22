@@ -9,14 +9,14 @@
 :root {
   --outer-card-bg: #284139;
   --outer-card-fg: #F8D794;
-  --muted:         #886830;
-  --bg:            #809076;
-  --ink:           #111A19;
-  --aux:           #454545;
-  --warning:       #f6b73c;
-  --radius:        12px;
-  --shadow:        5px 5px 11px #0000001a;
-  --border:        rgba(248, 215, 148, 0.18);
+  --muted: #886830;
+  --bg: #809076;
+  --ink: #111A19;
+  --aux: #454545;
+  --warning: #f6b73c;
+  --radius: 12px;
+  --shadow: 5px 5px 11px #0000001a;
+  --border: rgba(248, 215, 148, 0.18);
 }
 
 * {
@@ -28,7 +28,11 @@
 /* =========================
    1) Base & Typography
    ========================= */
-html, body { margin: 0; padding: 0; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: system-ui, Arial, sans-serif;
@@ -37,7 +41,9 @@ body {
   line-height: 1.6;
 }
 
-p { margin-bottom: 14px; }
+p {
+  margin-bottom: 14px;
+}
 
 h1 {
   font-family: "Cinzel", "Copperplate", "Copperplate Gothic Light", Garamond, serif;
@@ -70,13 +76,24 @@ h3 {
   margin: 22px 0 8px;
 }
 
-h1, h2, h3 { letter-spacing: .3px; }
+h1,
+h2,
+h3 {
+  letter-spacing: .3px;
+}
 
-ul, ol { padding-left: 1.25rem; }
+ul,
+ol {
+  padding-left: 1.25rem;
+}
 
-a:hover { text-decoration: underline; }
+a:hover {
+  text-decoration: underline;
+}
 
-strong { color: var(--outer-card-fg); }
+strong {
+  color: var(--outer-card-fg);
+}
 
 /* =========================
    2) Header & Nav
@@ -155,7 +172,9 @@ nav a.active:hover {
 }
 
 /* Dropdown */
-.dropdown { position: relative; }
+.dropdown {
+  position: relative;
+}
 
 .dropdown-content {
   display: none;
@@ -186,7 +205,9 @@ nav a.active:hover {
   text-decoration: none;
 }
 
-.dropdown:hover .dropdown-content { display: block; }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* =========================
    3) Layout
@@ -298,7 +319,8 @@ table {
   border: 1px solid var(--border);
 }
 
-th, td {
+th,
+td {
   border: 1px solid var(--border);
   padding: 12px 14px;
   text-align: left;
@@ -318,6 +340,16 @@ th {
 /* =========================
    6) Components
    ========================= */
+
+
+.figure-small img {
+  max-width: 1000px;
+}
+
+.figure-tiny img {
+  width: 70%;
+  max-width: 420px;
+}
 
 /* Prototype list */
 .prototype-list {
@@ -372,7 +404,11 @@ th {
   box-shadow: var(--shadow);
 }
 
-.status-box p { margin-bottom: 4px; font-size: 0.9rem; opacity: 0.85; }
+.status-box p {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
 
 .status-box .number {
   font-size: 1.8rem;
@@ -411,13 +447,27 @@ footer {
    8) Animations
    ========================= */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* =========================
@@ -429,7 +479,9 @@ footer {
     align-items: flex-start;
   }
 
-  nav ul { flex-wrap: wrap; }
+  nav ul {
+    flex-wrap: wrap;
+  }
 
   .dropdown-content {
     left: 0;
@@ -438,9 +490,13 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .page { padding: 18px; }
+  .page {
+    padding: 18px;
+  }
 
-  .hero-section h1 { font-size: 2.6rem; }
+  .hero-section h1 {
+    font-size: 2.6rem;
+  }
 
   table {
     display: block;
