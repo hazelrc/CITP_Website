@@ -1,231 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cost Analytics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<header>
-  <div class="navbar">
-    <div class="logo">Lama Lama Leak Detection</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="designCriteria.html">Design Criteria and Selection</a></li>
-        <li><a href="prototyping.html">Prototyping</a></li>
-        <li><a href="implementation.html">Implementation</a></li>
-        <li><a class="active"href="costAnalytics.html">Cost Analytics</a></li>
-        <li><a href="otherConsideration.html">Other Consideration</a></li>
-        <li><a href="recommendations.html">Recommendations</a></li>
-        <li><a href="references.html">References</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="navbar">
+      <div class="logo">Lama Lama Leak Detection</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="designCriteria.html">Design Criteria and Selection</a></li>
+          <li><a href="prototyping.html">Prototyping</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a class="active" href="costAnalytics.html">Cost Analytics</a></li>
+          <li><a href="otherConsideration.html">Other Consideration</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 
-<main>
-  <section class="page">
-  <h1>Cost Analysis</h1>
+  <main>
+    <section class="page">
+      <h1>Cost Analysis</h1>
 
-  <h3>Costing Approach and System Scope</h3>
-  <p>
-    This costing covers one Port Stewart unit, designed for replication across the other Lama Lama sites. 
-    All figures are in AUD and GST-inclusive where sourced locally. Two scenarios are presented: 
-    Scenario A places a LoRaWAN sensor at every site, while Scenario B substitutes standalone satellite 
-    monitors at the three remote sites if LoRaWAN coverage proves marginal.
-  </p>
-  <p>
-    The analysis follows five standard cost categories: material, labour, transport, training/implementation, 
-    and operating. Manufacturing labour is not shown separately because the system uses off-the-shelf 
-    Australian components, and a “discount for users” line does not apply because this is a grant-funded 
-    community project rather than a commercial product.
-  </p>
+      <h3>Costing Approach and System Scope</h3>
+      <p>
+        This costing covers one Port Stewart unit, designed for replication across the other Lama Lama sites.
+        All figures are in AUD and GST-inclusive where sourced locally. Two scenarios are presented:
+        Scenario A places a LoRaWAN sensor at every site, while Scenario B substitutes standalone satellite
+        monitors at the three remote sites if LoRaWAN coverage proves marginal.
+      </p>
+      <p>
+        The analysis follows five standard cost categories: material, labour, transport, training/implementation,
+        and operating. Manufacturing labour is not shown separately because the system uses off-the-shelf
+        Australian components, and a “discount for users” line does not apply because this is a grant-funded
+        community project rather than a commercial product.
+      </p>
 
-  <h3>Capital Expenditure</h3>
-  <p>
-    Total CAPEX is approximately <strong>$16,182</strong>. Material costs account for about one third of the total, 
-    while the remaining costs reflect installation labour, freight to Cape York, Ranger training, community 
-    engagement, and contingency. This shows that the main cost driver is the remoteness of the site, not the 
-    design itself.
-  </p>
+      <h3>Capital Expenditure</h3>
+      <p>
+        Total CAPEX is approximately <strong>$16,182</strong>. Material costs account for about one third of the total,
+        while the remaining costs reflect installation labour, freight to Cape York, Ranger training, community
+        engagement, and contingency. This shows that the main cost driver is the remoteness of the site, not the
+        design itself.
+      </p>
 
-  <table>
-    <tr>
-      <th>Category</th>
-      <th>Item / Scope</th>
-      <th>Amount (AUD, inc. GST)</th>
-    </tr>
-    <tr>
-      <td>Material</td>
-      <td>Tier 1 hardware — Aqualine tank instrumentation, pump line, 80 mm HDPE pipeline (Milesight EM500-PP sensors × 3, RAK7289V2 gateway, solar kit)</td>
-      <td>$2,784</td>
-    </tr>
-    <tr>
-      <td>Material</td>
-      <td>Tier 2 hardware — community-use zone (inline sight glasses + mechanical flow meter)</td>
-      <td>$300</td>
-    </tr>
-    <tr>
-      <td>Material</td>
-      <td>Tier 3 hardware — Upper Camp, Lower Camp, Running Creek (LoRaWAN sensors, Scenario A)</td>
-      <td>$1,998</td>
-    </tr>
-    <tr>
-      <td>Labour</td>
-      <td>Installation and on-site assembly — remote-area contractor day-rate plus Ranger labour during commissioning</td>
-      <td>$5,500</td>
-    </tr>
-    <tr>
-      <td>Transport</td>
-      <td>Freight from Australian suppliers to Port Stewart via Cairns</td>
-      <td>$2,800</td>
-    </tr>
-    <tr>
-      <td>Training & Implementation</td>
-      <td>Initial Ranger training on operation, dashboard use, and first-line maintenance</td>
-      <td>$1,400</td>
-    </tr>
-    <tr>
-      <td>Training & Implementation</td>
-      <td>Community engagement and promotion — awareness sessions and plain-language visual material</td>
-      <td>$600</td>
-    </tr>
-    <tr>
-      <td>Other</td>
-      <td>Equipment insurance (Year 0) and project contingency</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <th colspan="2">TOTAL CAPITAL EXPENDITURE (Scenario A — LoRaWAN at all sites)</th>
-      <th>$16,182</th>
-    </tr>
-  </table>
+      <table>
+        <tr>
+          <th>Category</th>
+          <th>Item / Scope</th>
+          <th>Amount (AUD, inc. GST)</th>
+        </tr>
+        <tr>
+          <td>Material</td>
+          <td>Tier 1 hardware — Aqualine tank instrumentation, pump line, 80 mm HDPE pipeline (Milesight EM500-PP
+            sensors × 3, RAK7289V2 gateway, solar kit)</td>
+          <td>$2,784</td>
+        </tr>
+        <tr>
+          <td>Material</td>
+          <td>Tier 2 hardware — community-use zone (inline sight glasses + mechanical flow meter)</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>Material</td>
+          <td>Tier 3 hardware — Upper Camp, Lower Camp, Running Creek (LoRaWAN sensors, Scenario A)</td>
+          <td>$1,998</td>
+        </tr>
+        <tr>
+          <td>Labour</td>
+          <td>Installation and on-site assembly — remote-area contractor day-rate plus Ranger labour during
+            commissioning</td>
+          <td>$5,500</td>
+        </tr>
+        <tr>
+          <td>Transport</td>
+          <td>Freight from Australian suppliers to Port Stewart via Cairns</td>
+          <td>$2,800</td>
+        </tr>
+        <tr>
+          <td>Training & Implementation</td>
+          <td>Initial Ranger training on operation, dashboard use, and first-line maintenance</td>
+          <td>$1,400</td>
+        </tr>
+        <tr>
+          <td>Training & Implementation</td>
+          <td>Community engagement and promotion — awareness sessions and plain-language visual material</td>
+          <td>$600</td>
+        </tr>
+        <tr>
+          <td>Other</td>
+          <td>Equipment insurance (Year 0) and project contingency</td>
+          <td>$800</td>
+        </tr>
+        <tr>
+          <th colspan="2">TOTAL CAPITAL EXPENDITURE (Scenario A — LoRaWAN at all sites)</th>
+          <th>$16,182</th>
+        </tr>
+      </table>
 
-  <h3>Operating Expenditure and Total Cost of Ownership</h3>
-  <p>
-    Annual OPEX is approximately <strong>$3,700</strong>. The largest component is Ranger inspection labour, 
-    shadow-priced at $2,000 so it remains visible in the total cost of ownership, even though it may be funded 
-    through existing Ranger programs.
-  </p>
+      <h3>Operating Expenditure and Total Cost of Ownership</h3>
+      <p>
+        Annual OPEX is approximately <strong>$3,700</strong>. The largest component is Ranger inspection labour,
+        shadow-priced at $2,000 so it remains visible in the total cost of ownership, even though it may be funded
+        through existing Ranger programs.
+      </p>
 
-  <table>
-    <tr>
-      <th>Category</th>
-      <th>Item</th>
-      <th>Amount (AUD / year)</th>
-    </tr>
-    <tr>
-      <td>Labour</td>
-      <td>Ranger inspection, first-response time, and walk-through inspections</td>
-      <td>$2,000</td>
-    </tr>
-    <tr>
-      <td>Services</td>
-      <td>Annual calibration visit by regional contractor</td>
-      <td>$800</td>
-    </tr>
-    <tr>
-      <td>Consumables</td>
-      <td>Spare parts inventory replenishment, including gaskets, fasteners, and small sensors</td>
-      <td>$600</td>
-    </tr>
-    <tr>
-      <td>Licence & Software</td>
-      <td>LoRaWAN network server and monitoring dashboard</td>
-      <td>$0</td>
-    </tr>
-    <tr>
-      <td>Connectivity</td>
-      <td>Sensor data backhaul over existing Starlink link</td>
-      <td>$0</td>
-    </tr>
-    <tr>
-      <td>Insurance</td>
-      <td>Equipment insurance for remote-area assets</td>
-      <td>$300</td>
-    </tr>
-    <tr>
-      <th colspan="2">TOTAL ANNUAL OPERATING COST</th>
-      <th>$3,700</th>
-    </tr>
-  </table>
+      <table>
+        <tr>
+          <th>Category</th>
+          <th>Item</th>
+          <th>Amount (AUD / year)</th>
+        </tr>
+        <tr>
+          <td>Labour</td>
+          <td>Ranger inspection, first-response time, and walk-through inspections</td>
+          <td>$2,000</td>
+        </tr>
+        <tr>
+          <td>Services</td>
+          <td>Annual calibration visit by regional contractor</td>
+          <td>$800</td>
+        </tr>
+        <tr>
+          <td>Consumables</td>
+          <td>Spare parts inventory replenishment, including gaskets, fasteners, and small sensors</td>
+          <td>$600</td>
+        </tr>
+        <tr>
+          <td>Licence & Software</td>
+          <td>LoRaWAN network server and monitoring dashboard</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>Connectivity</td>
+          <td>Sensor data backhaul over existing Starlink link</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>Insurance</td>
+          <td>Equipment insurance for remote-area assets</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <th colspan="2">TOTAL ANNUAL OPERATING COST</th>
+          <th>$3,700</th>
+        </tr>
+      </table>
 
-  <h4>10-Year Total Cost of Ownership</h4>
+      <h4>10-Year Total Cost of Ownership</h4>
 
-  <table>
-    <tr>
-      <th>Component</th>
-      <th>Formula</th>
-      <th>Amount (AUD)</th>
-    </tr>
-    <tr>
-      <td>Total capital expenditure (Year 0)</td>
-      <td>—</td>
-      <td>$16,182</td>
-    </tr>
-    <tr>
-      <td>Ten years of annual operating cost</td>
-      <td>10 × $3,700</td>
-      <td>$37,000</td>
-    </tr>
-    <tr>
-      <td>Year-10 battery refurbishment</td>
-      <td>—</td>
-      <td>$3,000</td>
-    </tr>
-    <tr>
-      <th colspan="2">10-year Total Cost of Ownership</th>
-      <th>$56,182</th>
-    </tr>
-  </table>
+      <table>
+        <tr>
+          <th>Component</th>
+          <th>Formula</th>
+          <th>Amount (AUD)</th>
+        </tr>
+        <tr>
+          <td>Total capital expenditure (Year 0)</td>
+          <td>—</td>
+          <td>$16,182</td>
+        </tr>
+        <tr>
+          <td>Ten years of annual operating cost</td>
+          <td>10 × $3,700</td>
+          <td>$37,000</td>
+        </tr>
+        <tr>
+          <td>Year-10 battery refurbishment</td>
+          <td>—</td>
+          <td>$3,000</td>
+        </tr>
+        <tr>
+          <th colspan="2">10-year Total Cost of Ownership</th>
+          <th>$56,182</th>
+        </tr>
+      </table>
 
-  <h3>Funding Pathways</h3>
-  <p>
-    The most direct funding option is the Indigenous Land Enterprise Infrastructure Fund (ILEIF), which offers 
-    grants up to <strong>$300,000</strong> for remote infrastructure. A single ILEIF grant could fund roughly 
-    18 Port Stewart units, leaving room for rollout to other Lama Lama sites.
-  </p>
-  <p>
-    Secondary funding options include the National Water Grid Fund’s First Nations stream and the Indigenous 
-    Land and Sea Corporation’s Our Country Our Future program. Ranger wages do not have to be drawn directly 
-    from this project budget.
-  </p>
+      <h3>Funding Pathways</h3>
+      <p>
+        The most direct funding option is the Indigenous Land Enterprise Infrastructure Fund (ILEIF), which offers
+        grants up to <strong>$300,000</strong> for remote infrastructure. A single ILEIF grant could fund roughly
+        18 Port Stewart units, leaving room for rollout to other Lama Lama sites.
+      </p>
+      <p>
+        Secondary funding options include the National Water Grid Fund’s First Nations stream and the Indigenous
+        Land and Sea Corporation’s Our Country Our Future program. Ranger wages do not have to be drawn directly
+        from this project budget.
+      </p>
 
-  <h3>Return on Investment</h3>
-  <p>
-    Non-revenue water typically accounts for 20–30% of supply in water utilities, and smart sensor networks can 
-    help recover substantial volumes. Port Stewart’s dry-season demand is around <strong>25,000 L/day</strong>, 
-    based on a peak population of about 100.
-  </p>
-  <p>
-    A conservative 5% recovery would save approximately <strong>456,000 L per year</strong>. Combined with avoided 
-    pipe-burst repairs and emergency water trucking, the annual benefits are expected to exceed the annual operating 
-    cost, giving capital payback within the first year on conservative assumptions.
-  </p>
+      <h3>Return on Investment</h3>
+      <p>
+        Non-revenue water typically accounts for 20–30% of supply in water utilities, and smart sensor networks can
+        help recover substantial volumes. Port Stewart’s dry-season demand is around <strong>25,000 L/day</strong>,
+        based on a peak population of about 100.
+      </p>
+      <p>
+        A conservative 5% recovery would save approximately <strong>456,000 L per year</strong>. Combined with avoided
+        pipe-burst repairs and emergency water trucking, the annual benefits are expected to exceed the annual operating
+        cost, giving capital payback within the first year on conservative assumptions.
+      </p>
 
-  <h3>Broader Considerations</h3>
-  <p>
-    Remoteness is built directly into the cost numbers. Cape York freight and remote contractor day-rates appear 
-    as their own line items rather than being hidden as general risks. Wet-season access restrictions are also 
-    considered, because remote monitoring allows leaks to be identified and prioritised even when physical access 
-    is limited.
-  </p>
-  <p>
-    The system also follows a “Maintenance First, Minimal Complexity” approach through modular components, 
-    a 10-year design life, and on-site spare parts. At the end of the system life, electronics and lithium-ion 
-    batteries can be returned to a metropolitan e-waste recycler through the same freight route used for delivery.
-  </p>
-</section>
-</main>
+      <h3>Broader Considerations</h3>
+      <p>
+        Remoteness is built directly into the cost numbers. Cape York freight and remote contractor day-rates appear
+        as their own line items rather than being hidden as general risks. Wet-season access restrictions are also
+        considered, because remote monitoring allows leaks to be identified and prioritised even when physical access
+        is limited.
+      </p>
+      <p>
+        The system also follows a “Maintenance First, Minimal Complexity” approach through modular components,
+        a 10-year design life, and on-site spare parts. At the end of the system life, electronics and lithium-ion
+        batteries can be returned to a metropolitan e-waste recycler through the same freight route used for delivery.
+      </p>
+      <section class="content-card interactive-calculator-card">
+        <h2>Interactive Cost Calculator</h2>
+        <a href="https://docs.google.com/spreadsheets/d/1RDqZO3fjxSZu9eiY0RW2otcFP11oGYOX/edit?usp=share_link&ouid=114824133655750721942&rtpof=true&sd=true"
+          target="_blank" class="calculator-button">
+          Interactive Cost Calculator
+        </a>
+      </section>
+    </section>
+  </main>
 
-<footer>
-  Water leak detection prototype website
-</footer>
+  <footer>
+    Water leak detection prototype website
+  </footer>
 </body>
+
 </html>

@@ -439,6 +439,24 @@ th {
   color: var(--outer-card-fg);
 }
 
+.calculator-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 26px;
+  background-color: #2f5d40;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.calculator-button:hover {
+  background-color: #1f3d2b;
+  transform: translateY(-2px);
+}
+
 /* =========================
    7) Footer
    ========================= */
