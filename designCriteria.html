@@ -1,87 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Design Criteria and Selection — Lama Lama Leak Detection</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<header>
-  <div class="navbar">
-    <div class="logo">Lama Lama Leak Detection</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active"href="designCriteria.html">Design Criteria and Selection</a></li>
-        <li><a href="prototyping.html">Prototyping</a></li>
-        <li><a href="implementation.html">Implementation</a></li>
-        <li><a href="costAnalytics.html">Cost Analytics</a></li>
-        <li><a href="otherConsideration.html">Other Consideration</a></li>
-        <li><a href="recommendations.html">Recommendations</a></li>
-        <li><a href="references.html">References</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="navbar">
+      <div class="logo">Lama Lama Leak Detection</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="designCriteria.html">Design Criteria and Selection</a></li>
+          <li><a href="prototyping.html">Prototyping</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="costAnalytics.html">Cost Analytics</a></li>
+          <li><a href="otherConsideration.html">Other Consideration</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 
-<main>
-  <section class="page">
+  <main>
+    <section class="page">
 
-    <h1>Design Criteria and Selection</h1>
+      <h1>Design Criteria and Selection</h1>
 
-    <section class="content-card">
-      <h2>Design Criteria</h2>
-      <p>The following design criteria are used for system evaluation and screening of alternative solutions. The weights are all set to 5 to ensure the objectives and fair of the evaluation process.</p>
+      <section class="content-card">
+        <h2>Design Criteria</h2>
+        <p>
+          The following design criteria are used for system evaluation and screening of alternative solutions.
+          The weights are all set to 5 to ensure the objectives and fair of the evaluation process.
+        </p>
 
-      <h3>1. Culturally Appropriate</h3>
-      <p>The solution must be linked with the cultural values, governance structure and local customs of Lama Lama Country, including coordination with the decision-making mechanism of the YAC, and respect the leading position of the elder group in community affairs (Lama Lama Aboriginal Corporation, n.d.).</p>
+        <h3>1. Culturally Appropriate</h3>
+        <p>
+          The solution must be linked with the cultural values, governance structure and local customs of
+          Lama Lama Country, including coordination with the decision-making mechanism of the YAC, and respect
+          the leading position of the elder group in community affairs (Lama Lama Aboriginal Corporation, n.d.).
+        </p>
 
-      <h3>2. Low Cost</h3>
-      <p>The initial installation cost and the long-term operation and maintenance costs of the solution must be within the community's affordability range. Priority should be given to reusing existing infrastructure such as FarmBot sensors and Starlink connections to reduce repetitive investment (EWB Australia, n.d.). The transportation and logistics costs in remote areas are high, and the selection of components should fully consider the convenience of procurement.</p>
+        <h3>2. Low Cost</h3>
+        <p>
+          The initial installation cost and the long-term operation and maintenance costs of the solution must be
+          within the community's affordability range. Priority should be given to reusing existing infrastructure
+          such as FarmBot sensors and Starlink connections to reduce repetitive investment (EWB Australia, n.d.).
+          The transportation and logistics costs in remote areas are high, and the selection of components should
+          fully consider the convenience of procurement.
+        </p>
 
-      <h3>3. Maintenance</h3>
-      <p>The solution must be capable of being maintained and simply repaired on a daily basis by Rangers and local residents without the assistance of external experts. The tools and spare parts required should be of common specifications. This standard directly responds to the core requirement of the EWB design brief of "maintenance priority and minimum complexity" (EWB Australia, n.d.).</p>
+        <h3>3. Maintenance</h3>
+        <p>
+          The solution must be capable of being maintained and simply repaired on a daily basis by Rangers and
+          local residents without the assistance of external experts. The tools and spare parts required should be
+          of common specifications. This standard directly responds to the core requirement of the EWB design brief
+          of "maintenance priority and minimum complexity" (EWB Australia, n.d.).
+        </p>
 
-      <h3>4. Relevance</h3>
-      <p>The solution must directly address the core issue of pipeline leakage. It can effectively reduce water resource loss and improve the reliability of the water supply during the dry season.</p>
+        <h3>4. Relevance</h3>
+        <p>
+          The solution must directly address the core issue of pipeline leakage. It can effectively reduce water
+          resource loss and improve the reliability of the water supply during the dry season.
+        </p>
 
-      <h3>5. Automatic</h3>
-      <p>The solution needs to be capable of proactively identifying leaks or abnormal conditions without human checking and minimising the routine inspection burden on Rangers as much as possible (Romero-Ben et al., 2023; Team, 2026).</p>
+        <h3>5. Automatic</h3>
+        <p>
+          The solution needs to be capable of proactively identifying leaks or abnormal conditions without human
+          checking and minimising the routine inspection burden on Rangers as much as possible
+          (Romero-Ben et al., 2023; Team, 2026).
+        </p>
 
-      <h3>6. Environment</h3>
-      <p>The solution must be able to withstand the extreme seasonal climate of Port Stewart, including conditions such as flooding during the rainy season, road closures, and high temperatures and dryness during the dry season (EWB Australia, n.d.).</p>
+        <h3>6. Environment</h3>
+        <p>
+          The solution must be able to withstand the extreme seasonal climate of Port Stewart, including conditions
+          such as flooding during the rainy season, road closures, and high temperatures and dryness during the dry
+          season (EWB Australia, n.d.).
+        </p>
 
-      <h3>7. Durability</h3>
-      <p>The equipment and components must be capable of long-term stable operation in remote environments, reducing the additional costs and logistics pressure caused by component replacement.</p>
+        <h3>7. Durability</h3>
+        <p>
+          The equipment and components must be capable of long-term stable operation in remote environments,
+          reducing the additional costs and logistics pressure caused by component replacement.
+        </p>
 
-      <h3>8. Feasibility</h3>
-      <p>The solution must be practically feasible within the constraints of existing resources, technical conditions and community capabilities.</p>
+        <h3>8. Feasibility</h3>
+        <p>
+          The solution must be practically feasible within the constraints of existing resources, technical
+          conditions and community capabilities.
+        </p>
+      </section>
+
+      <section class="content-card">
+        <h2>Design Solution Options</h2>
+        <p>
+          Here, three independent design proposals for addressing water leakage issues in Lama Lama Country will
+          be presented. Each proposal takes a different technical approach and all have taken into account the
+          remote and seasonal special environment of Lama Lama Country.
+        </p>
+
+        <h3>1. Hybrid Leak Detection System</h3>
+        <p>
+          This solution combines automatic sensing technology with manual community inspections. Key infrastructure
+          is continuously monitored using EM500-PP pressure sensors and data is sent back via Starlink. It is an
+          expansion based on the existing FarmBot system, achieving a balance between technical efficiency and local
+          maintainability.
+        </p>
+
+        <h3>2. Modular Water Tank and Repair System</h3>
+        <p>
+          This plan improves the system's redundancy by deploying standardised modular water tank components and
+          prefabricated pipeline repair kits, ensuring communities can quickly switch to backup water storage units
+          and complete repairs independently when pipeline leaks occur. The components are of universal specifications
+          and do not require specialised tools, facilitating local installation and replacement. However, this plan
+          focuses on emergency repairs after leaks occur and lacks proactive early warning capabilities, limiting its
+          contribution to water resource protection during dry seasons.
+        </p>
+
+        <h3>3. Manual Inspection and Monitoring</h3>
+        <p>
+          This scheme involves systematic visual inspections and pressure gauge readings of the main pipelines, water
+          towers and various water usage points by Rangers on a regular basis as per a standardised checklist. It does
+          not require any electronic devices, has an extremely low initial cost and is highly culturally appropriate.
+          However, it cannot maintain the inspection frequency at night and during the rainy season, and the response
+          time for leakage detection is relatively long. It has the lowest level of automation.
+        </p>
+        <h3>4. Smart Water Monitoring</h3>
+        <p>
+          This option uses a more advanced digital water monitoring system with higher levels of automation and
+          durability. It can provide strong real-time monitoring and reduce manual checking. However, the system has
+          a high capital cost and may require ongoing specialist support, which makes it less suitable for a remote
+          community with limited technical resources.
+        </p>
+      </section>
+
+      <section class="content-card">
+        <h2>Design Selection</h2>
+
+        <p>
+          A weighted decision matrix was used to evaluate the four design options against eight design criteria:
+          cultural appropriateness, low cost, maintenance, relevance, automation, environment, durability, and
+          feasibility. Each criterion was weighted equally at 5, reflecting their balanced importance to the Lama Lama
+          context, where remoteness, limited specialist labour, and community ownership all carry comparable weight.
+          Options were rated on a 1–5 scale (1 = poor, 5 = excellent), giving a maximum possible score of 200.
+        </p>
+
+        <figure class="image-placeholder">
+          <div class="placeholder-box">
+            <img src="Images/DecisionMatrix.png"
+              alt="Community ownership and long-term sustainability of the leak detection system">
+          </div>
+          <figcaption>Figure 1: Group decision matrix for design option evaluation.</figcaption>
+        </figure>
+        <br>
+        <p>
+          The Hybrid Leak Detection System (Option 1) scored highest at 155 points and was selected for further
+          development. It achieved the maximum rating of 5 on both relevance and feasibility, reflecting strong
+          alignment with the EWB design brief and a realistic implementation pathway given the community's existing
+          FarmBot infrastructure. Its balanced scores across cultural appropriateness (4), automation (4), and
+          environmental impact (4) confirmed that the tiered approach delivers measurable improvement without
+          introducing excessive complexity.
+        </p>
+
+        <p>
+          Smart Water Monitoring (Option 4) ranked second at 140 points, supported by the highest scores on automation
+          (5) and durability (5). However, it scored only 1 on low cost, conflicting with the project's resource
+          constraints and the "Maintenance First, Minimal Complexity" principle (EWB Australia, 2026). The capital
+          requirement and ongoing specialist support would have placed an unsustainable burden on the community.
+        </p>
+
+        <p>
+          Manual Inspection and Monitoring (Option 3) ranked third at 125 points, with maximum scores on cultural
+          appropriateness, low cost, relevance, and feasibility. Despite these strengths, its scores of 1 on maintenance
+          and automation revealed a critical weakness: the approach cannot detect leaks during wet-season access
+          restrictions, precisely when reliable water supply is most important. Relying solely on physical inspection
+          would leave the community exposed during the season of highest risk.
+        </p>
+
+        <p>
+          The Modular Water Tank and Repair System (Option 2) ranked lowest at 110 points. While it scored reasonably
+          on feasibility (4), it addressed repair speed rather than leak prevention, missing the core problem of early
+          detection identified in Section 3. Its low scores on cultural appropriateness (2) and durability (2) further
+          reduced its overall suitability.
+        </p>
+
+        <p>
+          The decision matrix confirmed that the Hybrid Leak Detection System provides the best balance across all eight
+          criteria. By combining automated monitoring on critical infrastructure with community-led inspection
+          elsewhere, it addresses the technical problem of leak detection while remaining culturally appropriate,
+          locally manageable, and operationally feasible. This option is therefore developed in detail in the following
+          section.
+        </p>
+      </section>
+
+      <section class="content-card">
+        <h2>Detailed Design</h2>
+
+        <p>
+          The hybrid leak detection system applies different monitoring intensities across three tiers based on
+          infrastructure criticality. This structure is modelled on the District Metered Area approach, where zones are
+          monitored separately and pressure or flow discrepancies indicate leaks (Romero-Ben et al., 2023).
+        </p>
+
+        <div class="tier-grid">
+          <div class="tier-card">
+            <h3>Tier 1: Critical Infrastructure</h3>
+            <p>
+              - Critical infrastructure uses continuous automated monitoring. Milesight EM500-PP LoRaWAN pressure
+              sensors are installed on the 80 mm HDPE pipeline and the pump line, with the existing FarmBot sensor
+              monitoring the 250,000 L Aqualine tank (FarmBot, n.d.). Nighttime minimum flow analysis triggers an
+              automatic alert when pressure drops exceed 10–15% of baseline.
+            </p>
+          </div>
+
+          <div class="tier-card">
+            <h3>Tier 2: Community-Use Zones</h3>
+            <p>
+              Community-use zones rely on low-technology monitoring. Inline sight glasses and mechanical flow indicators
+              are combined with weekly Ranger walk-through inspections, avoiding sensor dependency where continuous
+              monitoring is unnecessary.
+            </p>
+          </div>
+
+          <div class="tier-card">
+            <h3>Tier 3: Remote Sites</h3>
+            <p>
+              Remote sites at Upper Camp, Lower Camp, and Running Creek use standalone solar-powered tank level sensors
+              and LoRaWAN-compatible pressure sensors. A RAK7289V2 gateway transmits data across distances of up to 15
+              km to the central dashboard, removing the need for individual internet connections at each site
+              (Khairullah et al., 2025).
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Data from all three tiers flows to a single action-focused dashboard that displays location-specific alerts
+          and
+          recommended Ranger actions, rather than only raw sensor values. The system extends the existing FarmBot
+          infrastructure instead of replacing it, preserving familiarity for Rangers and avoiding duplicated hardware
+          investment.
+        </p>
+
+        <p>
+          Community concerns about data sovereignty, alert reliability, and over-dependence on external technology are
+          addressed through three measures: community-controlled data access protocols agreed with YAC, conservative
+          alert
+          thresholds to minimise false positives, and modular off-the-shelf components that allow on-site repair without
+          external specialists.
+        </p>
+      </section>
+
     </section>
+  </main>
 
-    <section class="content-card">
-      <h2>Design Solution Options</h2>
-      <p>Here, three independent design proposals for addressing water leakage issues in Lama Lama Country will be presented. Each proposal takes a different technical approach and all have taken into account the remote and seasonal special environment of Lama Lama Country.</p>
-
-      <h3>1. Hybrid Leak Detection System</h3>
-      <p>This solution combines automatic sensing technology with manual community inspections. Key infrastructure is continuously monitored using EMP500-PP pressure sensors and data is sent back via Starlink. It is an expansion based on the existing FarmBot system, achieving a balance between technical efficiency and local maintainability.</p>
-
-      <h3>2. Modular Water Tank and Repair System</h3>
-      <p>This plan improves the system's redundancy by deploying standardised modular water tank components and prefabricated pipeline repair kits, ensuring communities can quickly switch to backup water storage units and complete repairs independently when pipeline leaks occur. The components are of universal specifications and do not require specialised tools, facilitating local installation and replacement. However, this plan focuses on emergency repairs after leaks occur and lacks proactive early warning capabilities, limiting its contribution to water resource protection during dry seasons.</p>
-
-      <h3>3. Manual Inspection and Monitoring</h3>
-      <p>This scheme involves systematic visual inspections and pressure gauge readings of the main pipelines, water towers and various water usage points by Rangers on a regular basis as per a standardised checklist. It does not require any electronic devices, has an extremely low initial cost and is highly culturally appropriate. However, it cannot maintain the inspection frequency at night and during the rainy season, and the response time for leakage detection is relatively long. It has the lowest level of automation.</p>
-    </section>
-
-  </section>
-</main>
-
-<footer>
-  Water leak detection prototype website
-</footer>
+  <footer>
+    Water leak detection prototype website
+  </footer>
 </body>
+
 </html>
