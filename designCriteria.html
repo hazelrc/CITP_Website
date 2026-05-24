@@ -24,8 +24,7 @@
           <li><a href="prototyping.html">Prototyping</a></li>
           <li><a href="implementation.html">Implementation</a></li>
           <li><a href="costAnalytics.html">Cost Analytics</a></li>
-          <li><a href="otherConsideration.html">Other Consideration</a></li>
-          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="recommendations.html">Recommendations and Other Considerations</a></li>
           <li><a href="references.html">References</a></li>
         </ul>
       </nav>
@@ -208,57 +207,85 @@
         <h2>Detailed Design</h2>
 
         <p>
-          The hybrid leak detection system applies different monitoring intensities across three tiers based on
-          infrastructure criticality. This structure is modelled on the District Metered Area approach, where zones are
-          monitored separately and pressure or flow discrepancies indicate leaks (Romero-Ben et al., 2023).
+          The proposed design is a Hybrid Water Leak Detection System for Lama Lama Country. It is designed to detect
+          abnormal water loss, show simple alerts, and guide Rangers to inspect the correct location. The system does
+          not replace the existing water infrastructure. Instead, it adds monitoring and response support to help reduce
+          water loss from leaks.
+        </p>
+
+        <p>
+          The system follows a simple principle:
+        </p>
+
+        <p>
+          Sensors detect the problem, and Rangers verify and respond.
+        </p>
+
+        <p>
+          This approach is suitable because Lama Lama Country is remote, and repairs may be delayed by seasonal flooding
+          or limited access. A fully automated system may be too complex to maintain, while a fully manual system may
+          not detect leaks early enough. The hybrid approach balances technology with local knowledge and practical
+          maintenance.
+        </p>
+
+        <h3>Main System Structure</h3>
+
+        <p>
+          The system is divided into three monitoring tiers.
         </p>
 
         <div class="tier-grid">
           <div class="tier-card">
-            <h3>Tier 1: Critical Infrastructure</h3>
+            <h3>Tier 1: Critical Infrastructure Monitoring</h3>
             <p>
-              - Critical infrastructure uses continuous automated monitoring. Milesight EM500-PP LoRaWAN pressure
-              sensors are installed on the 80 mm HDPE pipeline and the pump line, with the existing FarmBot sensor
-              monitoring the 250,000 L Aqualine tank (FarmBot, n.d.). Nighttime minimum flow analysis triggers an
-              automatic alert when pressure drops exceed 10–15% of baseline.
+              Tier 1 focuses on the most important parts of the water system. This includes the 250,000 L Aqualine tank,
+              the diesel pump line, and the 80 mm HDPE pipeline. These areas are important because failure or leakage
+              here can affect the whole water supply.
+            </p>
+
+            <p>
+              Pressure sensors are placed at key points along the pipeline, such as the tank outlet, midline, and
+              end-of-line. The existing FarmBot tank-level sensor can also be reused to monitor storage levels. If the
+              tank level drops faster than expected or pipeline pressure falls below the normal range, the system can
+              identify a possible leak.
+            </p>
+
+            <p>
+              Pressure sensors are suitable because they are cheaper, easier to install, and more sensitive to leaks
+              than flow sensors in this context. Tank-level sensors help track storage changes and identify unusual
+              water loss over time.
             </p>
           </div>
 
           <div class="tier-card">
-            <h3>Tier 2: Community-Use Zones</h3>
+            <h3>Tier 2: Community-Use Area Monitoring</h3>
             <p>
-              Community-use zones rely on low-technology monitoring. Inline sight glasses and mechanical flow indicators
-              are combined with weekly Ranger walk-through inspections, avoiding sensor dependency where continuous
-              monitoring is unnecessary.
+              Tier 2 covers community-use areas such as the Community Centre and local facilities. These areas do not
+              need a complex sensor system. Instead, the design uses simple visual flow indicators, such as inline sight
+              glasses or mechanical flow meters, combined with weekly Ranger walk-through inspections.
+            </p>
+
+            <p>
+              This low-technology approach reduces cost and maintenance burden. It also supports local ownership because
+              Rangers and community members can visually check the system without needing specialist tools.
             </p>
           </div>
 
           <div class="tier-card">
-            <h3>Tier 3: Remote Sites</h3>
+            <h3>Tier 3: Remote Site Monitoring</h3>
             <p>
-              Remote sites at Upper Camp, Lower Camp, and Running Creek use standalone solar-powered tank level sensors
-              and LoRaWAN-compatible pressure sensors. A RAK7289V2 gateway transmits data across distances of up to 15
-              km to the central dashboard, removing the need for individual internet connections at each site
-              (Khairullah et al., 2025).
+              Tier 3 covers remote or disconnected sites such as Upper Camp, Lower Camp, and Running Creek. These
+              locations may be harder to access, especially during the wet season. For these areas, the system uses
+              solar-powered tank-level sensors and LoRaWAN or satellite reporting.
+            </p>
+
+            <p>
+              The purpose of Tier 3 is to allow remote monitoring when physical inspections are difficult. If a remote
+              tank level becomes too low or pressure data shows abnormal change, the dashboard can show which site needs
+              checking. This helps Rangers prioritise inspections instead of travelling to every location unnecessarily.
             </p>
           </div>
         </div>
-
-        <p>
-          Data from all three tiers flows to a single action-focused dashboard that displays location-specific alerts
-          and
-          recommended Ranger actions, rather than only raw sensor values. The system extends the existing FarmBot
-          infrastructure instead of replacing it, preserving familiarity for Rangers and avoiding duplicated hardware
-          investment.
-        </p>
-
-        <p>
-          Community concerns about data sovereignty, alert reliability, and over-dependence on external technology are
-          addressed through three measures: community-controlled data access protocols agreed with YAC, conservative
-          alert
-          thresholds to minimise false positives, and modular off-the-shelf components that allow on-site repair without
-          external specialists.
-        </p>
       </section>
 
     </section>
